@@ -5,7 +5,7 @@ This project classifies satellite imagery using deep learning models enhanced wi
 ## Project Structure
 
 ```
-src/
+/
 ├── dip/
 │   └── dip_modules.py          # Image preprocessing methods
 ├── models/
@@ -16,19 +16,23 @@ src/
 │   ├── test.py                 # Evaluate  pure spatial
 │   ├── dual_test.py            # Evaluate dual-branch model
 │   └── finetune.py             # Fine-tuning script
-└── utils/
-    └── generate_example.py     # Demo image preprocessing effects
+|── utils/
+|   └── generate_example.py     # Demo image preprocessing effects
+|—— radometric.ipynb            # apply DIP method to solve low light distortion
+|—— radio_fre.ipynb             # apply DIP and fre-domain feature to solve low light distortion
 ```
 
 ## Features
 
-**Image Preprocessing Methods:**
+**Image Preprocessing Methods - Haze:**
 - CLAHE (Contrast Limited Adaptive Histogram Equalization)
 - Unsharp masking
 - Laplacian sharpening
 - Dark channel prior 
 
-
+**Image Preprocessing Methods - Low Light:**
+- Homomorphic
+- Logarithmic
 ## Requirements
 
 Install dependencies:
@@ -59,6 +63,7 @@ data/
 ## Resources
 
 Model weights and datasets are available on [Google Drive](https://drive.google.com/drive/folders/1dngR6mZtThR68G4ITfK4pOxIQgQFczPw?usp=sharing).
+Low light data [Goole Drive- low light](https://drive.google.com/drive/folders/1jwr63UlZLXfVB3XEEsTYJybEhgPZIiCh?usp=sharing)
 ## Usage
 
 ### Training spatial-only Model
